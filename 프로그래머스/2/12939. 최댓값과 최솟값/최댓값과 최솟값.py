@@ -1,8 +1,8 @@
 def solution(s):
-    answer = ''
+    nums = list(map(int, s.split()))
     
-    numbers = list(map(int, s.split()))
-    
-    answer = str(min(numbers)) + " " + str(max(numbers))
-    
-    return answer
+    max_value = max(nums)
+    min_value = min(nums)
+                
+                
+    return f"{min_value} {max_value}"
