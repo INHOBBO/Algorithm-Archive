@@ -1,7 +1,4 @@
 def solution(seoul):
-    
-    for i, name in enumerate(seoul):
+    for index, name in enumerate(seoul):
         if name == "Kim":
-            return f"김서방은 {i}에 있다"
-        
-    
+            return f"김서방은 {index}에 있다"        
