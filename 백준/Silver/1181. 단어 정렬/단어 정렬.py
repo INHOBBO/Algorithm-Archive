@@ -1,14 +1,17 @@
 import sys
+input = sys.stdin.readline
 
-n = int(sys.stdin.readline())
+n = int(input())
 
-word_list = []
+dic = []
+dic = set(dic)
 for _ in range(n):
-	word_list.append(sys.stdin.readline().strip())
+    dic.add(input().rstrip())
+    
+dic = list(dic)
 
-word_list_set = list(set(word_list))
+dic.sort(key=lambda x:(len(x),x))
 
-word_list_sorted = sorted(word_list_set, key=lambda x: (len(x), x))
 
-for word in word_list_sorted:
-	print(word)
+for d in dic:
+    print(d)
