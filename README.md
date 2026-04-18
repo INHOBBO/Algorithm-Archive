@@ -1,4 +1,4 @@
-# Programmers-Python, SQL
+# Algorithm-Archive [Python, SQL]
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=200&section=header&text=Algorithm%20Journey&fontSize=50" />
