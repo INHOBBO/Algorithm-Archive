@@ -22,17 +22,17 @@
 > **"매일 조금씩 성장하는 저의 기록입니다!"**
 
 <div align="center">
-  <a href="https://solved.ac/your-baekjoon-id">
-    <img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=your-baekjoon-id" />
+  <a href="https://solved.ac/kanginho99">
+    <img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=kanginho99" />
   </a>
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=your-github-id&theme=tokyonight&hide_border=true" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=INHOBBO&theme=tokyonight&hide_border=true" />
   <br/><br/>
-  <img src="https://github-readme-stats.vercel.app/api?username=your-github-id&show_icons=true&theme=tokyonight&hide_border=true" />
+  <img src="https://github-readme-stats.vercel.app/api?username=INHOBBO&show_icons=true&theme=tokyonight&hide_border=true" />
 </div>
 
 <br/>
