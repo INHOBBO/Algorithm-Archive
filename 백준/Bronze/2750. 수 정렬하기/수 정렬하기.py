@@ -1,12 +1,14 @@
 import sys
 
-n = int(sys.stdin.readline())
+input = sys.stdin.readline
 
-num_list = []
+n = int(input())
+
+num = []
 for i in range(n):
-	num_list.append(int(sys.stdin.readline()))
-	
-num_list.sort()
+    num.append(int(input()))
 
-for num in num_list:
-    print(num)
+num.sort()
+
+for nu in num:
+    print(nu)
