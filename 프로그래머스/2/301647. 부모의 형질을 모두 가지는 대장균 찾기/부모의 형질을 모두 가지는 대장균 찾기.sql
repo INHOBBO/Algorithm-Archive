@@ -1,0 +1,10 @@
+SELECT 
+    C.ID, 
+    C.GENOTYPE, 
+    P.GENOTYPE AS PARENT_GENOTYPE
+FROM ECOLI_DATA AS C
+-- 부모의 정보를 가져오기 위해 셀프 조인
+JOIN ECOLI_DATA AS P ON C.PARENT_ID = P.ID
+-- 자식과 부모를 비트 연산한 결과가 부모와 똑같아야 함
+WHERE (C.GENOTYPE & P.GENOTYPE) = P.GENOTYPE
+ORDER BY C.ID ASC;
