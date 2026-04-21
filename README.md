@@ -6,7 +6,7 @@
 
 <div align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=25&pause=1000&color=42b883&center=true&vCenter=true&width=435&lines=꾸준함이+무기인+개발자+강인호입니다;오늘도+한+문제+해결+완료!+🌱" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=25&pause=1000&color=42b883&center=true&vCenter=true&width=435&lines= 꾸준하게+매일매일;오늘도+한+문제+해결+완료!+🌱" alt="Typing SVG" />
   </a>
 </div>
 
