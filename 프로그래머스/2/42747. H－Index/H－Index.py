@@ -3,8 +3,8 @@ def solution(citations):
     
     citations.sort(reverse=True)
     
-    for i, citation in enumerate(citations):
-        if citation < i + 1:
-            return i
+    for idx, citation in enumerate(citations):
+        if citation < idx + 1:
+            return idx
         
     return len(citations)
