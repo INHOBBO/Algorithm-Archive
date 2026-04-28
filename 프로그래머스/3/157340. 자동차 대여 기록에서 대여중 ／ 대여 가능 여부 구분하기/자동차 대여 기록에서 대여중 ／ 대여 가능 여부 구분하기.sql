@@ -1,0 +1,11 @@
+SELECT 
+    CAR_ID,
+    CASE 
+        -- 10월 16일이 포함된 렌탈 기록의 개수를 세어서, 1개 이상이면 대여중으로 판별!
+        WHEN SUM(CASE WHEN '2022-10-16' BETWEEN START_DATE AND END_DATE THEN 1 ELSE 0 END) > 0 
+        THEN '대여중'
+        ELSE '대여 가능'
+    END AS AVAILABILITY
+FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
+GROUP BY CAR_ID
+ORDER BY CAR_ID DESC;
