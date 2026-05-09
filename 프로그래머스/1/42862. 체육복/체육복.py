@@ -1,33 +1,20 @@
-# def solution(n, lost, reserve):
-#     _reserve = list(set(reserve)-set(lost))
-#     _lost = list(set(lost)-set(reserve))
-    
-#     for r in _reserve:
-#         if r-1 in _lost:
-#             _lost.remove(r-1)
-#         elif r+1 in _lost:
-#             _lost.remove(r+1)
-            
-#     return n-len(_lost)
-
+# 학생 번호는 체격 순. 앞 뒤로만 체육복 빌려줄 수 있음
+# n 전체 학생 수, lost 도난 당한 학생 리스트, reserve 여벌 옷 가진 학생 리스트
+# 체육복 있는 최대 학생 수 구하기
 
 def solution(n, lost, reserve):
-    answer = 0
-    std = [1] * (n+1)
     
-    for i in lost:
-        std[i] = 0
+    # 공통으로 있는 요소 제거
+    reserve_set = set(reserve) - set(lost) # 여분 줄 준비된 애들 [1,3,5]
+    lost_set = set(lost) - set(reserve) # 도난 당하고 여분도 없는 애들 [2,4]
+    
+    # 앞에 학생만 생각
+    for i in reserve_set: # [1,3,5]
+        if i-1 in lost_set: # [2,4]
+            lost_set.remove(i-1)
+        elif i+1 in lost_set:
+            lost_set.remove(i+1)
+    
+    return n-len(lost_set)
+            
         
-    reserve.sort()
-    
-    for i in reserve:
-        if i in lost:
-            std[i] = 1
-        elif std[i-1] == 0:
-            std[i-1] = 1
-        elif i+1 <= n and std[i+1] == 0:
-            std[i+1] = 1
-    
-    answer = std.count(1)
-    
-    return answer-1
