@@ -1,13 +1,13 @@
 def solution(s):
-    answer = []
+    stack = []
     
     for char in s:
         if char == '(':
-            answer.append(char)
-        else:
-            if not answer:
+            stack.append(char)
+        elif char == ')':
+            if not stack:
                 return False
-            
-            answer.pop()
+            stack.pop()
     
-    return len(answer) == 0
+    return len(stack) == 0
+    
