@@ -1,0 +1,12 @@
+# 공간을 둘 이상 등록 = "헤비 유저"
+# ID 오름차순
+# 데이터 2개 이상 있는 HOST_ID 추출
+SELECT ID, NAME, HOST_ID
+FROM PLACES
+WHERE HOST_ID IN (
+    SELECT HOST_ID
+    FROM PLACES
+    GROUP BY HOST_ID
+    HAVING COUNT(HOST_ID) >= 2
+)
+ORDER BY ID
