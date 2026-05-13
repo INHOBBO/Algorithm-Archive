@@ -1,10 +1,12 @@
+# 물고기 종류 별 가장 큰 물고기 ID, 이름, 길이 출력
+# ID 오름차순
+# 그룹화를 했는데, 그게 각 종류별 1등이어야 함
 SELECT I.ID, N.FISH_NAME, I.LENGTH
 FROM FISH_INFO AS I
 JOIN FISH_NAME_INFO AS N ON I.FISH_TYPE = N.FISH_TYPE
 WHERE (I.FISH_TYPE, I.LENGTH) IN (
-    -- 1. 물고기 종류별로 가장 큰 길이를 먼저 뽑아냅니다.
     SELECT FISH_TYPE, MAX(LENGTH)
-    FROM FISH_INFO
+    FROM FISH_INFO 
     GROUP BY FISH_TYPE
-)
-ORDER BY I.ID ASC;
+    )
+ORDER BY I.ID
